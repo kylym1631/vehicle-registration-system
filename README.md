@@ -2,8 +2,8 @@
 
 ## Шаг 1: Клонирование репозитория
 ```bash
-git clone <URL вашего репозитория>
-cd <название вашего проекта>
+git clone https://github.com/kylym1631/vehicle-registration-system.git
+cd vehicle-registration-system
 ```
 ## Шаг 2: Установка зависимостей
 ```bash
