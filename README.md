@@ -19,6 +19,9 @@ DATABASE_URL="postgresql://<пользователь>:<пароль>@127.0.0.1:5
 ```bash
 php bin/console doctrine:database:create --if-not-exists # Создает базу данных, если она не существует
 ```
+### Всегда отвечайте 'yes' когда промпт спросит о чем-то
+
+```bash
 ## Шаг 5: Миграции
 ```bash
 php bin/console make:migration
@@ -34,5 +37,5 @@ php bin/console doctrine:fixtures:load
 ```
 ## Шаг 8: Запуск сервера
 ```bash
-symfony server:run
+symfony server:start
 ```
