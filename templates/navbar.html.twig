@@ -1,0 +1,16 @@
+<nav class="bg-gray-800">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                <div class="hidden sm:ml-6 sm:block">
+                    <div class="flex space-x-4">
+                        {% set currentRoute = app.request.get('_route') %}
+                        <a href="{{ path('vehicle_list') }}" class="{{ currentRoute == 'vehicle_list' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white ' }}   rounded-md px-3 py-2 text-sm font-medium">Список Номеров</a>
+                        <a href="{{ path('vehicle_register_form') }}" class="{{ currentRoute == 'vehicle_register_form' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white ' }}   rounded-md px-3 py-2 text-sm font-medium">Регистрировать авто</a>
+                        <a href="{{ path('vehicle_models') }}" class="{{ currentRoute == 'vehicle_models' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white ' }}   rounded-md px-3 py-2 text-sm font-medium">Количество моделей</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

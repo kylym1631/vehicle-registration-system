@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Передача Прав Собственности на Транспортное Средство{% endblock %}
+
+{% block body %}
+    <div class="max-w-xl mx-auto mt-10">
+        <h1 class="text-2xl font-bold mb-5">Передача Прав Собственности</h1>
+        <form action="{{ path('vehicle_transfer_ownership', {'registrationNumber': vehicle.registrationNumber}) }}" method="POST" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2">
+{#                    TODO link for editing #}
+                    Регистрационный Номер (неизменяемый):
+                </label>
+                <input type="text" value="{{ vehicle.registrationNumber }}" readonly
+                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 bg-gray-100 leading-tight">
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2">
+                    Марка (неизменяемая):
+                </label>
+                <input type="text" value="{{ vehicle.make }}" readonly
+                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 bg-gray-100 leading-tight">
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2">
+                    Модель (неизменяемая):
+                </label>
+                <input type="text" value="{{ vehicle.model }}" readonly
+                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 bg-gray-100 leading-tight">
+            </div>
+
+            <div class="mb-6">
+                <label for="newOwnerFullName"  class=" block text-gray-700 text-sm font-bold mb-2">
+                    ФИО Нового Владельца:
+                </label>
+                <input  autofocus type="text" id="newOwnerFullName" name="newOwnerFullName" required
+                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                       placeholder="Введите ФИО нового владельца">
+            </div>
+
+            <div class="flex items-center justify-between">
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    Передать Права
+                </button>
+            </div>
+        </form>
+    </div>
+{% endblock %}
