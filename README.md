@@ -10,11 +10,10 @@ cd vehicle-registration-system
 composer install
 ```
 ### Шаг 3: Настройка переменных окружения
-Скопируйте файл .env и переименуйте его в .env.local Затем отредактируйте его для настройки подключения к базе данных PostgreSQL.
-Пример:
+Создайте файл .env.local Затем наишите команду для настройки подключения к базе данных PostgreSQL.
 
 ```bash
-DATABASE_URL="postgresql://<пользователь>:<пароль>@127.0.0.1:5432/<название_базы_данных>?serverVersion=13&charset=utf8"
+DATABASE_URL="postgresql://<пользователь>:<пароль>@127.0.0.1:5432/<название_базы_данных>?serverVersion=15&charset=utf8"
 ```
 ## Шаг 4: Создание базы данных PostgreSQL
 ```bash
