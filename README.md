@@ -39,8 +39,8 @@ php bin/console doctrine:fixtures:load -n
 symfony server:start --no-tls
 ```
 ## Скриншоты
-![Example Image](https://github.com/kylym1631/vehicle-registration-system/raw/main/docs/images/list.jpeg)
-![Example Image](https://github.com/kylym1631/vehicle-registration-system/raw/main/docs/images/history.jpeg)
+![Example Image](https://github.com/kylym1631/vehicle-registration-system/blob/main/docs/images/list.jpeg)
+![Example Image](https://github.com/kylym1631/vehicle-registration-system/blob/main/docs/images/history.jpeg)
 # Как бы я улучшил
     * Поиск и выбор по номерам, владельцам, марке и модели
     * Экспорт повторяющихся компонентов (кнопок и т.д.)
