@@ -17,25 +17,24 @@ DATABASE_URL="postgresql://<пользователь>:<пароль>@127.0.0.1:5
 ```
 ## Шаг 4: Создание базы данных PostgreSQL
 ```bash
-php bin/console doctrine:database:create --if-not-exists # Создает базу данных, если она не существует
+php bin/console doctrine:database:create --if-not-exists -n # Создает базу данных, если она не существует
 ```
 ### Всегда отвечайте 'yes' когда промпт спросит о чем-то
 
-```bash
 ## Шаг 5: Миграции
 ```bash
-php bin/console make:migration
-php bin/console doctrine:migrations:migrate
+php bin/console make:migration -n
+php bin/console doctrine:migrations:migrate -n
 ```
 ## Шаг 6: Обновление схемы
 ```bash
-php bin/console doctrine:schema:update --force # Обновляет схему
+php bin/console doctrine:schema:update --force -n # Обновляет схему
 ```
 ## Шаг 7: Загрузка фикстур
 ```bash
-php bin/console doctrine:fixtures:load
+php bin/console doctrine:fixtures:load -n
 ```
 ## Шаг 8: Запуск сервера
 ```bash
-symfony server:start
+symfony server:start --no-tls
 ```
